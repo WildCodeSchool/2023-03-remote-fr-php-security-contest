@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Challenges{% endblock %}
+
+{% block body %}
+    <h1>Challenges</h1>
+    {% for challenge in challenges %}
+        <div class="card">
+            <div class="card-header">
+                Flag N° {{ challenge.step }} - Difficulté : {{ challenge.level }}
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{ challenge.name }}</h5>
+                <p class="card-text">
+                    {% if (app.user.stepInProgress == challenge.step ) %}
+                        <i class="fas fa-arrow-circle-right"></i> Poste ta solution pour accéder au prochain challenge
+                        {% include 'challenge/_form_solution.html.twig' %}
+                    {% endif %}
+                    {% if (app.user.stepInProgress > challenge.step ) %}
+                        <i class="fas fa-check"></i> Challenge réussi !
+                    {% endif %}
+                    {% if (app.user.stepInProgress < challenge.step ) %}
+                        <i class="fas fa-hourglass-start"></i> Challenge en attente
+                    {% endif %}
+                </p>
+                <a href="{{ challenge.url }}" class="btn btn-primary">GO GO GO</a>
+            </div>
+        </div>
+
+    {% endfor %}
+{% endblock %}

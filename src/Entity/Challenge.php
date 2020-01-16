@@ -31,6 +31,16 @@ class Challenge
      */
     private $solution;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $level;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $step;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -68,6 +78,30 @@ class Challenge
     public function setSolution(string $solution): self
     {
         $this->solution = $solution;
+
+        return $this;
+    }
+
+    public function getLevel(): ?int
+    {
+        return $this->level;
+    }
+
+    public function setLevel(int $level): self
+    {
+        $this->level = $level;
+
+        return $this;
+    }
+
+    public function getStep(): ?int
+    {
+        return $this->step;
+    }
+
+    public function setStep(int $step): self
+    {
+        $this->step = $step;
 
         return $this;
     }
