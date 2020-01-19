@@ -20,11 +20,17 @@ class ChallengeController extends AbstractController
         $user            = $this->getUser();
         $challengeInProgress = $challengeRepository->findOneByStep($this->getUser()->getStepInProgress());
 
-
-        if ($solutionPosted && $solutionPosted === $challengeInProgress->getSolution()) {
-            $user->setStepInProgress($user->getStepInProgress() + 1);
-            $em->flush();
+        if ($solutionPosted) {
+            if ($solutionPosted === $challengeInProgress->getSolution()) {
+                $user->setStepInProgress($user->getStepInProgress() + 1);
+                $user->setLastCaptureAt(new \DateTime('now'));
+                $em->flush();
+                $this->addFlash('success', 'Congratulations !');
+            } else {
+                $this->addFlash('danger', 'Try again !');
+            }
         }
+
 
 
         return $this->render('challenge/index.html.twig', [
