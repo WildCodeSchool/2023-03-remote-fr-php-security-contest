@@ -13,7 +13,7 @@ class RankingController extends AbstractController
      */
     public function index(UserRepository $userRepository)
     {
-        $users = $userRepository->findBy([], ['stepInProgress' => 'desc']);
+        $users = $userRepository->getRanking();
         return $this->render('ranking/index.html.twig', [
             'users' => $users,
         ]);
