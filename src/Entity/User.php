@@ -40,6 +40,11 @@ class User implements UserInterface
      */
     private $stepInProgress = 1;
 
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $lastCaptureAt;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -121,6 +126,18 @@ class User implements UserInterface
     public function setStepInProgress(int $stepInProgress): self
     {
         $this->stepInProgress = $stepInProgress;
+
+        return $this;
+    }
+
+    public function getLastCaptureAt(): ?\DateTimeInterface
+    {
+        return $this->lastCaptureAt;
+    }
+
+    public function setLastCaptureAt(?\DateTimeInterface $lastCaptureAt): self
+    {
+        $this->lastCaptureAt = $lastCaptureAt;
 
         return $this;
     }

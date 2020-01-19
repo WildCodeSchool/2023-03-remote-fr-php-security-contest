@@ -41,6 +41,11 @@ class Challenge
      */
     private $step;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $notice;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -102,6 +107,18 @@ class Challenge
     public function setStep(int $step): self
     {
         $this->step = $step;
+
+        return $this;
+    }
+
+    public function getNotice(): ?string
+    {
+        return $this->notice;
+    }
+
+    public function setNotice(string $notice): self
+    {
+        $this->notice = $notice;
 
         return $this;
     }
