@@ -1,4 +1,6 @@
 <form action="" method="post">
-    <input type="text" name="solution">
-    <button class="btn-outline-primary" type="submit">Test</button>
+    <div class="input-group">
+        <input class="form-control" type="text" name="solution" aria-describedby="button-addon{{ loop.index }}">
+        <button class="btn btn-outline-secondary" type="submit" id="button-addon{{ loop.index }}">Test</button>
+    </div>
 </form>
