@@ -3,5 +3,10 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
-Good luck !
+    <div class="container">
+        <p>Bonne chance !</p>
+        {% if app.user %}
+            <p>Pour accéder à certains challenges, il faut créer un compte sur <a target="_blank" href="https://root-me.org">https://root-me.org</a></p>
+        {% endif %}
+    </div>
 {% endblock %}
