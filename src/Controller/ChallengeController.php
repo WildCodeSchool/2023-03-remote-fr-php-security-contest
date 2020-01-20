@@ -27,9 +27,9 @@ class ChallengeController extends AbstractController
                 $user->setStepInProgress($user->getStepInProgress() + 1);
                 $user->setLastCaptureAt(new \DateTime('now'));
                 $em->flush();
-                $this->addFlash('success', 'Congratulations !');
+                $this->addFlash('success', 'Bien joué, tu as capturé le drapeau !');
             } else {
-                $this->addFlash('danger', 'Try again !');
+                $this->addFlash('danger', 'Raté ! cherche encore');
             }
         }
 
