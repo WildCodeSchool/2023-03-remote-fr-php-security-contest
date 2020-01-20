@@ -73,13 +73,6 @@ class ChallengeFixtures extends Fixture
             'notice'   => 'Injecte une alert(). Une fois réussi, entre le titre exact du niveau 2 de xss-game pour capturer le drapeau',
         ],
         [
-            'name'     => '[Web server] HTTP - Open redirect',
-            'url'      => 'http://challenge01.root-me.org/web-serveur/ch52/',
-            'solution' => 'e6f8a530811d5a479812d7b82fc1a5c5',
-            'level'    => 3,
-            'notice'   => 'Trouve un moyen de faire une redirection vers un domaine autre que ceux proposés sur la page web puis jette un oeil au network pour capturer le drapeau',
-        ],
-        [
             'name'     => '[Web client] Usurpation de navigateur',
             'url'      => 'http://change-browser.hax.w3challs.com/',
             'solution' => 'W3C{now_that_we_have_the_right_browser_lets_get_the_party_started}',
@@ -99,6 +92,13 @@ class ChallengeFixtures extends Fixture
             'solution' => 'LINUX',
             'level'    => 3,
             'notice'   => 'Recherche dans les entrailles du serveur',
+        ],
+        [
+            'name'     => '[Web server] HTTP - Open redirect',
+            'url'      => 'http://challenge01.root-me.org/web-serveur/ch52/',
+            'solution' => 'e6f8a530811d5a479812d7b82fc1a5c5',
+            'level'    => 4,
+            'notice'   => 'Trouve un moyen de faire une redirection vers un domaine autre que ceux proposés sur la page web puis jette un oeil au network pour capturer le drapeau',
         ],
         [
             'name'     => '[XSS] Tchat scripting',
