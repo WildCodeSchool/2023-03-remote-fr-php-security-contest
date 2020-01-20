@@ -14,7 +14,7 @@ class ChallengeFixtures extends Fixture
             'url'      => 'http://challenge01.root-me.org/web-serveur/ch1/',
             'solution' => 'nZ^&@q5&sjJHev0',
             'level'    => 1,
-            'notice'   => 'Craque le mot de passe pour capturer le drapeau',
+            'notice'   => 'Craque le mot de passe pour capturer le drapeau. Si tu rencontres un problème pour afficher la page, je te rappelle que tu dois créer un compte sur root-me.org pour accéder à certains challenges',
         ],
         [
             'name'     => '[Web client] HTML - boutons désactivés',
@@ -77,7 +77,7 @@ class ChallengeFixtures extends Fixture
             'url'      => 'http://challenge01.root-me.org/web-serveur/ch52/',
             'solution' => 'e6f8a530811d5a479812d7b82fc1a5c5',
             'level'    => 3,
-            'notice'   => 'Hack la redirection et jette un oeil au network pour capturer le drapeau',
+            'notice'   => 'Trouve un moyen de faire une redirection vers un domaine autre que ceux proposés sur la page web puis jette un oeil au network pour capturer le drapeau',
         ],
         [
             'name'     => '[Web client] Usurpation de navigateur',
