@@ -14,11 +14,12 @@
             <i class="fas fa-check"></i> Challenge réussi !
         {% endif %}
         {% if (app.user.stepInProgress < challenge.step ) %}
+            {% set disabled = true %}
             <i class="fas fa-hourglass-start"></i> Challenge en attente
         {% endif %}
         </p>
     </div>
     <div class="card-footer">
-        <a target="_blank" href="{{ challenge.url }}" class="btn btn-primary">Voir le challenge</a>
+        <a target="_blank" href="{{ disabled ? '#' : challenge.url }}" class="btn btn-primary {{ disabled ? 'disabled' }}">Voir le challenge</a>
     </div>
 </div>

@@ -3,15 +3,15 @@
 {% block title %}Challenges{% endblock %}
 
 {% block body %}
-    <h1>Challenges</h1>
-            {% for challenge in challenges %}
-                {% set cardStyle = '' %}
-                {% if (app.user.stepInProgress > challenge.step ) %}
-                    {% set cardStyle = 'text-white bg-success' %}
-                {% endif %}
-                {% if (app.user.stepInProgress < challenge.step ) %}
-                    {% set cardStyle = 'text-white bg-dark' %}
-                {% endif %}
-                {% include 'challenge/_card.html.twig' %}
-            {% endfor %}
+    {% for challenge in challenges %}
+        {% set cardStyle = '' %}
+        {% if (app.user.stepInProgress > challenge.step ) %}
+            {% set cardStyle = 'text-white bg-success' %}
+        {% endif %}
+        {% if (app.user.stepInProgress < challenge.step ) %}
+            {% set cardStyle = 'text-white bg-dark' %}
+        {% endif %}
+        {% set disabled = false %}
+        {% include 'challenge/_card.html.twig' %}
+    {% endfor %}
 {% endblock %}
