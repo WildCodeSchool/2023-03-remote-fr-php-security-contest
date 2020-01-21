@@ -20,16 +20,20 @@ class ChallengeController extends AbstractController
         $challenges      = $challengeRepository->findAll();
         $solutionPosted  = $request->request->get('solution');
         $user            = $this->getUser();
-        $challengeInProgress = $challengeRepository->findOneByStep($this->getUser()->getStepInProgress());
+        $stepInProgress  = $user->getStepInProgress();
+        $challengeInProgress = $challengeRepository->findOneByStep($stepInProgress);
 
         if ($solutionPosted) {
             if ($solutionPosted === $challengeInProgress->getSolution()) {
-                $user->setStepInProgress($user->getStepInProgress() + 1);
+                $newStep = $stepInProgress + 1;
+                $user->setStepInProgress($newStep);
                 $user->setLastCaptureAt(new \DateTime('now'));
                 $em->flush();
                 $this->addFlash('success', 'Bien joué, tu as capturé le drapeau !');
+                return $this->redirectToRoute('challenge', ['_fragment' => 'challenge-' . $newStep]);
             } else {
                 $this->addFlash('danger', 'Raté ! cherche encore');
+                return $this->redirectToRoute('challenge', ['_fragment' => 'challenge-' . $stepInProgress]);
             }
         }
 

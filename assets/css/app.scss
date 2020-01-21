@@ -8,3 +8,9 @@ $theme-colors: (
 @import '~@fortawesome/fontawesome-free/scss/regular';
 @import '~@fortawesome/fontawesome-free/scss/brands';
 @import 'ranking';
+
+.alert {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
