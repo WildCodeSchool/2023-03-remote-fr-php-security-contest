@@ -45,11 +45,18 @@ class ChallengeFixtures extends Fixture
             'notice'   => 'Craque le mot de passe pour capturer le drapeau',
         ],
         [
+            'name'     => '[Web client] Rand Game',
+            'url'      => 'http://challenge01.root-me.org/web-serveur/ch56/',
+            'solution' => 'H7tp_h4s_N0_s3Cr37S_F0r_y0U',
+            'level'    => 1,
+            'notice'   => 'Triche pour gagner et récupérer le mot de passe',
+        ],
+        [
             'name'     => '[Web client] Hack la banque',
             'url'      => 'https://hackxor.net/mission?id=1',
             'solution' => '13780',
             'level'    => 2,
-            'notice'   => 'Entre le montant de la balance du compte en banque pour capturer le drapeau',
+            'notice'   => 'Entre le montant de la balance du compte en banque N°59247213 pour capturer le drapeau',
         ],
         [
             'name'     => '[Web client] Admin usurpation',
@@ -92,6 +99,13 @@ class ChallengeFixtures extends Fixture
             'solution' => 'LINUX',
             'level'    => 3,
             'notice'   => 'Recherche dans les entrailles du serveur',
+        ],
+        [
+            'name'     => '[Web server] Injection',
+            'url'      => 'http://challenge01.root-me.org/web-serveur/ch9/',
+            'solution' => 'TYsgv75zgtq',
+            'level'    => 4,
+            'notice'   => 'Récupère le mot de passe de user1',
         ],
         [
             'name'     => '[Web server] HTTP - Open redirect',
