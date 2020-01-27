@@ -56,7 +56,7 @@ class ChallengeFixtures extends Fixture
             'url'      => 'https://hackxor.net/mission?id=1',
             'solution' => '13780',
             'level'    => 2,
-            'notice'   => 'Entre le montant de la balance du compte en banque N°59247213 pour capturer le drapeau',
+            'notice'   => 'Entre le montant de la balance du compte en banque N°16554987 pour capturer le drapeau',
         ],
         [
             'name'     => '[Web client] Admin usurpation',
