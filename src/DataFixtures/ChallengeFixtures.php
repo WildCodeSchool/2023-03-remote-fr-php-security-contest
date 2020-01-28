@@ -24,7 +24,7 @@ class ChallengeFixtures extends Fixture
             'notice'   => 'Craque le mot de passe pour capturer le drapeau',
         ],
         [
-            'name'     => '[Cryptanalyse] HTTP - Directory indexing',
+            'name'     => '[Cryptanalyse] Decode',
             'url'      => 'http://challenge01.root-me.org/cryptanalyse/ch8/ch8.txt',
             'solution' => '2ac376481ae546cd689d5b91275d324e',
             'level'    => 1,
