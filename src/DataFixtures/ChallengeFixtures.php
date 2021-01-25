@@ -67,7 +67,7 @@ class ChallengeFixtures extends Fixture
         ],
         [
             'name'     => '[Web client] Javascript - Source',
-            'url'      => 'http://challenge01.root-me.org/web-client/ch1/ch1.html',
+            'url'      => 'http://challenge01.root-me.org/web-client/ch1',
             'solution' => '123456azerty',
             'level'    => 2,
             'notice'   => 'Craque le mot de passe pour capturer le drapeau',
