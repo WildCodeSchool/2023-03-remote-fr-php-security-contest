@@ -29,7 +29,7 @@ class ChallengeController extends AbstractController
                 $user->setStepInProgress($newStep);
                 $user->setLastCaptureAt(new \DateTime('now'));
                 $em->flush();
-                $this->addFlash('success', 'Bien joué, tu as capturé le drapeau !');
+                $this->addFlash('success', 'Bien joué, tu as re !');
                 return $this->redirectToRoute('challenge', ['_fragment' => 'challenge-' . $newStep]);
             } else {
                 $this->addFlash('danger', 'Raté ! cherche encore');

@@ -1,4 +1,4 @@
-# capture-the-flag
+# security-challenge
 
 Run migrations and fixtures
 

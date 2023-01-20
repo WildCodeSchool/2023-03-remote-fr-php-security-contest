@@ -12,11 +12,11 @@
                     <span>{{ loop.index }}</span>
                     <div class="{{ loop.index < 4 ? 'rank-'~loop.index }}">
                         {% include 'ranking/_medal.html.twig' %}
-                        <span title=" {{user.lastCaptureAt ? 'Heure de la dernière capture ' ~ user.lastCaptureAt|date('d/m/Y - H:i:s') }}">
+                        <span title=" {{user.lastCaptureAt ? 'Heure du dernier challenge réussi ' ~ user.lastCaptureAt|date('d/m/Y - H:i:s') }}">
                             {{ user.username }}
                         </span>
                     </div>
-                    <span title=" {{user.lastCaptureAt ? 'Heure de la dernière capture ' ~ user.lastCaptureAt|date('d/m/Y - H:i:s') }}" class="badge badge-secondary badge-pill">Drapeaux capturés : {{ user.stepInProgress - 1 }}</span>
+                    <span title=" {{user.lastCaptureAt ? 'Heure du dernier challenge réussi ' ~ user.lastCaptureAt|date('d/m/Y - H:i:s') }}" class="badge badge-secondary badge-pill">Challenges réussis : {{ user.stepInProgress - 1 }}</span>
                 </li>
             {% endfor %}
         </ul>
