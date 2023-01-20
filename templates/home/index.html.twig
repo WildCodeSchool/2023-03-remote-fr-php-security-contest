@@ -1,12 +1,33 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Capture the flag{% endblock %}
+{% block title %}Capture the flag
+{% endblock %}
 
 {% block body %}
-    <div class="container">
-        <p>Bonne chance !</p>
-        {% if app.user %}
-            <p>Pour accéder à certains challenges, il faut créer un compte sur <a target="_blank" href="https://root-me.org">https://root-me.org</a></p>
-        {% endif %}
-    </div>
+	<main class="container">
+		<div class="card mt-5 p-5">
+			<h1 class=" text-primary">Wild Code School Security Challenge</h1>
+			<hr>
+			{% if not is_granted('ROLE_USER') %}
+				<h2>Welcome wilder</h2>
+				<p class="fs-5 mt-5">
+					first you need to
+					<a class="mx-2 btn btn-lg btn-primary text-light" href="{{ path('app_register') }}">Create an account</a>
+					or
+					<a class="mx-2 btn btn-lg btn-success text-light" href="{{ path('app_login') }}">Log in</a>
+					to start</p>
+			{% else %}
+				<h2>Welcome
+					{{ app.user.username}}</h2>
+			{% endif %}
+			<p class="alert alert-warning p-3 rounded fs-5 mt-3">To access some challenge, you also need to
+				<a class="btn btn-warning text-light" target="_blank" href="https://root-me.org">Create an account on Root me</a>
+			</p>
+			<p class="p-3 rounded fs-5 mt-3">Once you have create the Root-me account, you can
+				<a class="btn btn-lg btn-dark text-light" href="{{ path('challenge')}}">Discover challenges</a>
+			</p>
+
+
+		</div>
+	</main>
 {% endblock %}

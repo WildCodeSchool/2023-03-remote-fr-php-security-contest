@@ -1,0 +1,14 @@
+$primary: #f76c6c;
+
+@import "~bootstrap/scss/bootstrap";
+// @import "~@fortawesome/fontawesome-free/scss/fontawesome";
+// @import '~@fortawesome/fontawesome-free/scss/solid';
+// @import '~@fortawesome/fontawesome-free/scss/regular';
+// @import '~@fortawesome/fontawesome-free/scss/brands';
+@import 'ranking';
+
+body {
+  background-color: #0a0004;
+  background-image: url("https://www.transparenttextures.com/patterns/gun-metal.png");
+}
+

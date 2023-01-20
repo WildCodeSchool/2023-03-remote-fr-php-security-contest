@@ -1,5 +1,4 @@
-require('../css/app.scss');
+require('../styles/app.scss');
 
-const $ = require('jquery');
 require('bootstrap');
 
