@@ -16,7 +16,7 @@
                             {{ user.username }}
                         </span>
                     </div>
-                    <span title=" {{user.lastCaptureAt ? 'Heure du dernier challenge réussi ' ~ user.lastCaptureAt|date('d/m/Y - H:i:s') }}" class="badge badge-secondary badge-pill">Challenges réussis : {{ user.stepInProgress - 1 }}</span>
+                    <span title=" {{user.lastCaptureAt ? 'Heure du dernier challenge réussi ' ~ user.lastCaptureAt|date('d/m/Y - H:i:s') }}" class="badge bg-primary badge-pill">Challenges réussis : {{ user.stepInProgress - 1 }}</span>
                 </li>
             {% endfor %}
         </ul>
