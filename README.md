@@ -2,4 +2,4 @@
 
 Run migrations and fixtures
 
-Run yarn encore
+Run yarn 
