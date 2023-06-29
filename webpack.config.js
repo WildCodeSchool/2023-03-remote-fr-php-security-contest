@@ -1,4 +1,6 @@
 var Encore = require('@symfony/webpack-encore');
+const TerserPlugin = require('terser-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 
 Encore
 // directory where compiled assets will be stored
@@ -29,6 +31,12 @@ Encore
     .enableSourceMaps(!Encore.isProduction())
     // enables hashed filenames (e.g. app.abc123.css)
     .enableVersioning(Encore.isProduction())
+    .configureTerserPlugin((options) => {
+        options.minify = TerserPlugin.esbuildMinify;
+    })
+    .configureCssMinimizerPlugin((options) => {
+        options.minify = CssMinimizerPlugin.esbuildMinify;
+    })
 
 // uncomment if you use TypeScript
 //.enableTypeScriptLoader()
